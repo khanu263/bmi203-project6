@@ -21,7 +21,7 @@ def main():
     X_val = sc.transform(X_val)
 
     # perform regression
-    log_model = logreg.LogisticRegression(num_feats = 6, max_iter = 10, tol = 0.01, learning_rate = 0.00001, batch_size = 12)
+    log_model = logreg.LogisticRegression(num_feats = 6, learning_rate = 1e-5, tol = 1e-6)
     log_model.train_model(X_train, y_train, X_val, y_val)
     log_model.plot_loss_history()
     plt.show()
