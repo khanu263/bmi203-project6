@@ -1,7 +1,5 @@
-# Project 6
+# bmi203-project6
 Logistic regression and application to medical record data
-
-# Assignment
 
 ## Overview
 In class, we described how to derive an OLS estimators in a linear regression model, which can be used to identify a best fit line. For this project, you will be implementing a logistic regression model using the same framework. Logistic regression is useful for classification because the function outputs a value between 0 and 1, which corresponds to categorical classification. 
@@ -22,29 +20,25 @@ To allow for binary classification using logistic regression, we used a sigmoid 
 * https://towardsdatascience.com/optimization-loss-function-under-the-hood-part-ii-d20a239cde11
 * https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html
 
-## Project requirements (10 points total)
+## Project requirements
 
-[ TODO ] Complete the Logreg class with your implementation of the algorithm (5 points)
-  * complete the 'calculate_gradient' method
-  * complete the 'loss_function' method
-  * complete the 'make_prediction' method
-
+* [TODO] Complete the Logreg class with your implementation of the algorithm
+  * complete the `calculate_gradient` method
+  * complete the `loss_function` method
+  * complete the `make_prediction` method
   * effective API structure with good documentation and commenting
-
-[ TODO ] Unit Testing (3 points)
+* [TODO] Unit testing
   * check that fit appropriately trains model & weights get updated
   * check that loss approaches 0
   * check that predict is working 
-
-[ TODO ] Packaging (2 point)
+* [TODO] Packaging
   * pip installable module
   * github actions (install + pytest)
 
-
-# Getting Started
+## Getting started
 To get started you will need to fork this repo onto your own github account. Work on your codebase from your own repo and commit changes. I have listed the minimum python module requirements in `requirements.txt` 
 
-# Additional notes
+## Additional notes
 Try tuning the hyperparameters if you find that your model doesn't converge. Hint: too high of a learning rate or too large of a batch size can sometimes cause the model to be unstable (loss function goes to infinity).
 
 Sklearn has some sample datasets (diabetes, breast cancer) that you can also use for testing. 
