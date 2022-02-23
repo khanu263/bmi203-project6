@@ -1,5 +1,6 @@
 # bmi203-project6
-Logistic regression and application to medical record data
+
+![Unit test status](https://github.com/khanu263/bmi203-project6/workflows/Unit%20tests/badge.svg)
 
 ## Overview
 In class, we described how to derive an OLS estimators in a linear regression model, which can be used to identify a best fit line. For this project, you will be implementing a logistic regression model using the same framework. Logistic regression is useful for classification because the function outputs a value between 0 and 1, which corresponds to categorical classification. 
@@ -31,9 +32,9 @@ To allow for binary classification using logistic regression, we used a sigmoid 
   * ~~check that fit appropriately trains model & weights get updated~~
   * ~~check that loss approaches 0~~
   * ~~check that predict is working~~ 
-* [TODO] Packaging
-  * pip installable module
-  * github actions (install + pytest)
+* ~~Packaging~~
+  * ~~pip installable module~~
+  * ~~github actions (install + pytest)~~
 
 ## Getting started
 To get started you will need to fork this repo onto your own github account. Work on your codebase from your own repo and commit changes. I have listed the minimum python module requirements in `requirements.txt` 
