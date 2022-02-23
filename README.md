@@ -27,10 +27,10 @@ To allow for binary classification using logistic regression, we used a sigmoid 
   * ~~complete the `loss_function` method~~
   * ~~complete the `make_prediction` method~~
   * ~~effective API structure with good documentation and commenting~~
-* [TODO] Unit testing
-  * check that fit appropriately trains model & weights get updated
-  * check that loss approaches 0
-  * check that predict is working 
+* ~~Unit testing~~
+  * ~~check that fit appropriately trains model & weights get updated~~
+  * ~~check that loss approaches 0~~
+  * ~~check that predict is working~~ 
 * [TODO] Packaging
   * pip installable module
   * github actions (install + pytest)
