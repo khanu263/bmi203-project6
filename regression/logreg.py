@@ -97,8 +97,8 @@ class LogisticRegression(BaseRegressor):
         
     def calculate_gradient(self, X, y) -> np.ndarray:
         """
-        TODO: write function to calculate gradient of the
-        logistic loss function to update the weights 
+        Calculate gradient of the logistic loss function to update
+        the weights.
 
         Params:
             X (np.ndarray): feature values
@@ -107,14 +107,17 @@ class LogisticRegression(BaseRegressor):
         Returns: 
             gradients for given loss function (np.ndarray)
         """
-        pass
+        
+        # Compute the error and gradient, divide across length
+        err = y - self.make_prediction(X)
+        grad = np.dot(X.T, err)
+        return grad / len(y)
     
     def loss_function(self, X, y) -> float:
         """
-        TODO: get y_pred from input X and implement binary cross 
-        entropy loss function. Binary cross entropy loss assumes that 
-        the classification is either 1 or 0, not continuous, making
-        it more suited for (binary) classification.
+        Binary cross entropy loss: assumes that the classification is 
+        either 1 or 0, not continuous, making it more suited for
+        (binary) classification.
 
         Params:
             X (np.ndarray): feature values
@@ -123,13 +126,18 @@ class LogisticRegression(BaseRegressor):
         Returns: 
             average loss 
         """
-        pass
+        
+        # Make prediction, clip output, and compute the loss function
+        p = self.make_prediction(X)
+        p = np.clip(p, 0.00001, 0.99999)
+        return -np.mean(y * np.log(p) + (1 - y) * np.log(1 - p))
     
     def make_prediction(self, X) -> np.array:
         """
-        TODO: implement logistic function to get estimates (y_pred) for input
-        X values. The logistic function is a transformation of the linear model W.T(X)+b 
-        into an "S-shaped" curve that can be used for binary classification
+        Logistic function to get estimates (y_pred) for input X values.
+        The logistic function is a transformation of the linear model 
+        W.T(X)+b into an "S-shaped" curve that can be used for binary
+        classification.
 
         Params: 
             X (np.ndarray): Set of feature values to make predictions for
@@ -138,8 +146,5 @@ class LogisticRegression(BaseRegressor):
             y_pred for given X
         """
 
-        pass
-
-
-
-    
+        # Compute sigmoid on input dotted with weights
+        return 1 / (1 + np.exp(-np.dot(X, self.W)))
