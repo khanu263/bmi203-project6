@@ -110,7 +110,7 @@ class LogisticRegression(BaseRegressor):
         
         # Compute the error and gradient, divide across length
         err = y - self.make_prediction(X)
-        grad = np.dot(X.T, err)
+        grad = -np.dot(X.T, err)
         return grad / len(y)
     
     def loss_function(self, X, y) -> float:
