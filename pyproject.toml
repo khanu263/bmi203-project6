@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "regression"
+authors = [{name = "Umair Khan", email = "umair.khan@ucsf.edu"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+dependencies = ["matplotlib >= 3.3", "numpy >= 1.19", "pandas >= 1.1", "scikit-learn >= 1.0", "pytest >= 6.2"]
